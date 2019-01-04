@@ -19,7 +19,7 @@
     "pretest": "npm run build",
     "test": "npm run test:full",
     "test:full": "npm run test:unit && npm run test:integration && npm run test:end-to-end",
-    "test:unit": "mocha --require spec/config/setup spec/unit --require spec/config/setup-unit --recursive",
+    "test:unit": "mocha --require spec/config/setup spec/unit --recursive",
     "test:integration": "mocha --require spec/config/setup spec/integration --recursive",
     "test:end-to-end": "mocha --require spec/config/setup spec/end-to-end --recursive",
     "test:browser": "./node_modules/.bin/grunt jasmine",
@@ -64,7 +64,6 @@
     "jszip": "3.1.3",
     "moment": ">=2.19.3",
     "node-unzip-2": "^0.2.7",
-    "promish": ">=5.0.2",
     "sax": "^1.2.2",
     "temp": "0.8.3"
   },

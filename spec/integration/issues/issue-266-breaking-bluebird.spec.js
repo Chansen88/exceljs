@@ -4,7 +4,6 @@ var chai = require('chai');
 
 var verquire = require('../../utils/verquire');
 
-var PromishLib = verquire('utils/promish');
 var Excel = verquire('excel');
 
 var expect = chai.expect;
@@ -14,13 +13,6 @@ var TEST_XLSX_FILE_NAME = './spec/out/wb.test.xlsx';
 
 describe('github issues', function() {
   describe('issue 266 - Breaking change removing bluebird', function() {
-    var promish;
-    beforeEach(function() {
-      promish = PromishLib.Promish;
-    });
-    afterEach(function() {
-      PromishLib.Promish = promish;
-    });
 
     it('common bluebird functions', function() {
       var wb = new Excel.Workbook();

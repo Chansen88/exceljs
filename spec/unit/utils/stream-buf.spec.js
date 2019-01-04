@@ -1,7 +1,6 @@
 'use strict';
 
 var expect = require('chai').expect;
-var Promish = require('promish');
 var fs = require('fs');
 var path = require('path');
 
@@ -41,7 +40,7 @@ describe('StreamBuf', function() {
   });
 
   it('handles buffers', function() {
-    return new Promish((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       var s = fs.createReadStream(path.join(__dirname, 'data/image1.png'));
       var sb = new StreamBuf();
       sb.on('finish', () => {

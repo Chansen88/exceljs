@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var Promish = require('promish');
+var promisify = require('util').promisify;
 var chai = require('chai');
 var verquire = require('../../utils/verquire');
 
@@ -11,7 +11,7 @@ var expect = chai.expect;
 
 const IMAGE_FILENAME = __dirname + '/../data/image.png';
 var TEST_XLSX_FILE_NAME = './spec/out/wb.test.xlsx';
-var fsReadFileAsync = Promish.promisify(fs.readFile);
+var fsReadFileAsync = promisify(fs.readFile);
 
 // =============================================================================
 // Tests
